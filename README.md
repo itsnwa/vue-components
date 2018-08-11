@@ -1,16 +1,12 @@
-# vue-components
+# Vue component library
+This library was created to maintain generic vue components to use in other projects, and uses Storybook for quick lookup.
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
+### Dev environment
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Build
 ```
 npm run build
 ```
