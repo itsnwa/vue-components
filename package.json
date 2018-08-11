@@ -5,18 +5,23 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "serve:storybook": "vue-cli-service serve:storybook -p 6006 -c config/storybook",
+    "build:storybook": "vue-cli-service build:storybook -c config/storybook"
   },
   "dependencies": {
     "vue": "^2.5.17"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "4.0.0-alpha.15",
+    "@storybook/addon-links": "4.0.0-alpha.15",
     "@vue/cli-plugin-babel": "^3.0.0",
     "@vue/cli-plugin-eslint": "^3.0.0",
     "@vue/cli-service": "^3.0.0",
     "@vue/eslint-config-prettier": "^3.0.0",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.1",
+    "vue-cli-plugin-storybook": "^0.4.1",
     "vue-template-compiler": "^2.5.17"
   },
   "eslintConfig": {
@@ -28,7 +33,15 @@
       "plugin:vue/essential",
       "@vue/prettier"
     ],
-    "rules": {},
+    "rules": {
+      "prettier/prettier": [
+        {
+          "singleQuote": true,
+          "semi": false,
+          "trailingComma": "none"
+        }
+      ]
+    },
     "parserOptions": {
       "parser": "babel-eslint"
     }
